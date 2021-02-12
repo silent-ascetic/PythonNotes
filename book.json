@@ -1,0 +1,29 @@
+{
+    "title": "Python3学习笔记",
+    "author": "passer",
+    "description": "总结在学习Python3的过程中学到的知识点",
+    "language": "zh-hans",
+    "root": "./Python3笔记",
+    "plugins": [
+        "-lunr",
+        "-search",
+        "splitter",
+        "klipse",
+        "ancre-navigation",
+        "search-pro",
+        "chapter-fold",
+        "edit-link",
+        "tbfed-pagefooter"
+    ],
+    "pluginsConfig": {
+        "tbfed-pagefooter": {
+            "copyright": "&copy passer",
+            "modify_label": "最后修改时间",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "edit-link": {
+            "base": "https://gitee.com/-/ide/project/silent-passer/PythonNotes/edit/master",
+            "label": "编辑页面"
+        }
+    }
+}

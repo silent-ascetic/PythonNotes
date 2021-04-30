@@ -6,7 +6,7 @@
 
 用法：
 
-```text
+```py
 a = input("提示语句")
 print(a)
 ```
@@ -20,7 +20,7 @@ print(a)
 
 具体用法：
 
-```text
+```py
 # 不换行
 print("1", '2', sep='', end='')
 print(1, 3, sep='\n', end='end')

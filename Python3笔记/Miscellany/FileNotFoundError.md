@@ -14,7 +14,7 @@ img.show()
 
 **文件树：**
 
-```text
+```
 py
  └─test
       │  open.py

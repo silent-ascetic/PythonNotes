@@ -72,7 +72,7 @@ def f2():
 
 示例：
 
-```text
+```py
 def fun(a, b, c=3, d='4'):
     print(a, b, c, d)
 
@@ -86,7 +86,7 @@ fun(1, 2)
 
 在调用函数时指定为那个参数传参
 
-```text
+```py
 def fun(c, a=2, b=3):
     print(a, b, c)
 
@@ -104,7 +104,7 @@ fun(c=0, b=4)
 在参数名前加一个 `*` ，通常将这种参数命名为args，即 `*args`，  
 当包含 `*args` 参数的函数被调用时，会将多余的参数以元组的形式保存到 `args` 参数中 示例：
 
-```text
+```py
 def fun(a, b=9, *args):
     print(a, b, args[0])
 
@@ -118,7 +118,7 @@ fun(1, 2, 3, 4, 5)
 它接收的参数会以字典的形式保存到 `keargs` 中  
 示例：
 
-```text
+```py
 def fun(a, **kwargs):
     print(a, kwargs)
 
@@ -137,7 +137,7 @@ key只能是单个字母，不能写成 `'c'` 、数字等其他数据类型，�
 
 看示例体会用法
 
-```text
+```py
 a = (1, 3, 4)
 b = {'k':2, 3:2.4}
 

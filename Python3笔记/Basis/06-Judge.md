@@ -2,7 +2,11 @@
 
 python中判断语句只有if（和while循环），不支持switch
 
-判断相等或不等用 `==` 和 `!=`, 用 `None` 表示空
+判断数值相等或不等用 `==` 和 `!=`，用 `None` 表示空，`is` 比较地址
+
+`==` 可以比较列表、元组、字典中的元素是否相等
+
+
 
 ## 与或非
 
@@ -11,7 +15,7 @@ python中判断语句只有if（和while循环），不支持switch
 相当于C语言中的 `&&`  
 举个栗子：
 
-```text
+```py
 print(True and False)
 ```
 
@@ -20,15 +24,15 @@ print(True and False)
 相当于C语言中的 `||`  
 举个栗子:
 
-```text
+```py
 print(True or False)
 ```
 
 ### 逻辑非（not）
 
-类似C语言中的 `!`,not后面可以接表示真假的表达式或变量表示非真或非假，但不能与等号连用 例如：
+类似C语言中的 `!`，`not` 后面可以接表示真假的表达式或变量表示非真或非假，但不能与等号连用 例如：
 
-```text
+```py
 print(not 1 == 3)
 ```
 
@@ -36,19 +40,19 @@ print(not 1 == 3)
 
 ## if用法
 
-```text
+```py
 if 's' in 'asf':
     print('666')
 ```
 
-```text
+```py
 if 3 == 4:
     print('haha')
 else:
     print(666)
 ```
 
-```text
+```py
 if False:
     pass
 elif False:

@@ -19,7 +19,7 @@ b = a
 通过 `copy` 模块实现深拷贝
 
 可迭代类型变量存储可迭代类型元素时，存储的是它的地址。  
-当进行深拷贝时，会将其中的可迭代类型元素分别进行深拷贝，然后再将新的内存地址存储到新变量中。
+使用 `copy.deepcopy` 进行深拷贝时，会将其中的可迭代类型元素分别进行深拷贝，然后再将新的内存地址存储到新变量中。用 `copy.copy` 不会深拷贝可迭代类型元素，它只会将元素原地址添加到新变量中。
 
 
 ```py
@@ -34,8 +34,12 @@ c = copy.deepcopy(a)
 print(id(a), id(c))
 
 e = copy.deepcopy(b)
+f = copy.copy(b)
 a.append(5)
 
 print(b)
 print(e)
+print(f)
 ```
+
+`copy.copy` 为不可变类型执行浅拷贝

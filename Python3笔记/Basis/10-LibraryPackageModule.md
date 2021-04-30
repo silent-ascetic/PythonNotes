@@ -2,7 +2,9 @@
 
 模块就是就有某些完整功能且可供外界调用的py文件
 
-## 导入模块
+## 模块
+
+### 导入模块
 
 语法格式： `import moduleName` 或 `from moduleName import 模块中的函数、类、变量等（* 表示导入全部）`  
 使用 `import` 导入模块，要通过模块名.模块内容的方式调用模块中的内容  
@@ -10,7 +12,7 @@
 按照python语法规范，导入语句必须放在文件开头，但是什么时候使用什么时候导入程序不报错。 导入模块所在的py文件会被执行,然后执行之后的代码  
 `import moduleName as name` 当模块名很长时为模块起一个别名，减少之后的工作量
 
-```text
+```py
 import sys
 from json import dumps
 
@@ -20,7 +22,7 @@ dumps(s)
 print(s)
 ```
 
-## 自定义模块
+### 自定义模块
 
 根据模块的定义，自己写的具有完整功能的单个py文件就是一个模块
 
@@ -43,6 +45,42 @@ def my():
 
 class A:
     pass
+```
+
+### 模块搜索路径
+
+当我们在程序中导入模块时，python解释器会根据sys模块中path列表变量存储的路径进行搜索模块
+```py
+import sys
+
+print(sys.path)
+
+'''
+结果：
+['E:\\aboutpython\\pythonbooks\\PythonNotes', 'E:\\AboutPython\\SDK\\Python38\\python38.zip', 'E:\\AboutPython\\SDK\\Python38\\DLLs', 'E:\\AboutPython\\SDK\\Python38\\lib', 'E:\\AboutPython\\SDK\\Python38', 'E:\\AboutPython\\SDK\\Python38\\lib\\site-packages']
+'''
+```
+
+如果想添加搜索路径，向 `sys.path` 中添加路径即可，例：
+```py
+import sys
+
+sys.path.append('F:\\Py')
+
+```
+
+### 重导入模块
+
+当我们修改了程序导入的模块时，如果不结束该程序就无法使用模块中修改的内容。  
+因为python会将导入的模块编译成二进制文件（.pyc）。  
+这时可以通过 `imp` 模块中的 `reload()` 方法来重新导入模块
+
+```py
+import myModule
+from imp import *
+
+reload(myModule)
+
 ```
 
 ## 包

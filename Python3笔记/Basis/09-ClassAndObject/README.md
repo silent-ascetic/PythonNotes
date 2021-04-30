@@ -9,8 +9,8 @@ python中一切皆对象，定义的类也是对象，称为类对象。
 ## 类的组成部分
 
 1. 类名
-2. [方法](https://github.com/silent-ascetic/PythonNotes/tree/76479db272c4b8b3735dbb0824ed80cb047ccadf/Python3笔记/02-基础/10.类与对象/01.方法.md)
-3. [属性](https://github.com/silent-ascetic/PythonNotes/tree/76479db272c4b8b3735dbb0824ed80cb047ccadf/Python3笔记/02-基础/10.类与对象/02.属性.md)
+2. [方法](01.Method.md)
+3. [属性](02.Attribute.md)
 
 ## 类定义与实例化
 

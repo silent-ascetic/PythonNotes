@@ -8,15 +8,15 @@ description: 数据类型总览
 
 ## 类型说明
 
-1. [int](https://github.com/silent-ascetic/PythonNotes/tree/76479db272c4b8b3735dbb0824ed80cb047ccadf/Python3笔记/02-基础/数据类型/01.int.md)：整型
-2. [float](https://github.com/silent-ascetic/PythonNotes/tree/76479db272c4b8b3735dbb0824ed80cb047ccadf/Python3笔记/02-基础/数据类型/02.float.md)：浮点型
-3. [complex](https://github.com/silent-ascetic/PythonNotes/tree/76479db272c4b8b3735dbb0824ed80cb047ccadf/Python3笔记/02-基础/数据类型/03.complex.md)：复数
-4. [bool](https://github.com/silent-ascetic/PythonNotes/tree/76479db272c4b8b3735dbb0824ed80cb047ccadf/Python3笔记/02-基础/数据类型/04.bool.md)：布尔类型
-5. [str](https://github.com/silent-ascetic/PythonNotes/tree/76479db272c4b8b3735dbb0824ed80cb047ccadf/Python3笔记/02-基础/数据类型/05.str.md)：字符串
-6. [list](https://github.com/silent-ascetic/PythonNotes/tree/76479db272c4b8b3735dbb0824ed80cb047ccadf/Python3笔记/02-基础/数据类型/06.list.md)：列表
-7. [dict](https://github.com/silent-ascetic/PythonNotes/tree/76479db272c4b8b3735dbb0824ed80cb047ccadf/Python3笔记/02-基础/数据类型/07.dict.md)：字典
-8. [tuple](https://github.com/silent-ascetic/PythonNotes/tree/76479db272c4b8b3735dbb0824ed80cb047ccadf/Python3笔记/02-基础/数据类型/08.tuple.md)：元组
-9. [set](https://github.com/silent-ascetic/PythonNotes/tree/76479db272c4b8b3735dbb0824ed80cb047ccadf/Python3笔记/02-基础/数据类型/09.set.md)：集合
+1. [int](01.int.md)：整型
+2. [float](02.float.md)：浮点型
+3. [complex](03.complex.md)：复数
+4. [bool](04.bool.md)：布尔类型
+5. [str](05.str.md)：字符串
+6. [list](06.list.md)：列表
+7. [dict](07.dict.md)：字典
+8. [tuple](08.tuple.md)：元组
+9. [set](09.set.md)：集合
 
 ## 类型查看
 

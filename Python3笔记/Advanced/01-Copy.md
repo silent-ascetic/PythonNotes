@@ -4,13 +4,14 @@
 
 拷贝地址
 
-
 ```py
 
 a = {1:'q'}
 
 b = a
 
+print(id(a), id(b))
+print(a, b)
 ```
 
 ## 深拷贝

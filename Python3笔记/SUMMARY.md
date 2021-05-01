@@ -35,6 +35,11 @@
 * [14.Eval用法](Basis/14-eval.md)
 * [15.Range用法](Basis/15-range.md)
 
+## 进阶
+
+* [01.拷贝](Advanced/01-Copy.md)
+* [02.位运算](Advanced/02-BitOperation.md)
+
 ## 杂记
 
 * [常见文件格式](Miscellany/FileType.md)

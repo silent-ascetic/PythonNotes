@@ -63,3 +63,15 @@ del c
 print(sys.getrefcount(b))
 ```
 
+## 访问权限
+
+> python通过在变量或方法名前加 `_` 来表示其访问权限
+
+1. __*：两个下划线表示私有
+2. _*：一个下划线类似C++中的 `protected`
+3. *：无下划线为公有
+
+**注：**  
+* 当使用 `import moduleName` 导入模块时模块内的所有内容都可以使用。
+* python通过name mangling（名字重整）实现私有化，将私有属性或方法名改为 `_ClassName__name`,在类外调用改名后的属性或方法即可实现调用私有属性或方法。
+

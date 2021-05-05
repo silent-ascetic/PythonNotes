@@ -26,10 +26,29 @@ print(isinstance([], Iterator))
 
 ## 创建迭代器
 
-用 `iter` 函数可将**可迭代类型**创建为迭代器  
+用 `iter` 函数可将**可迭代类型**创建为迭代器对象    
 迭代器可以用 `next` 或 `__next__()` 函数进行迭代，
 ```py
 it = iter("123456")
 print(next(it))
 print(it.__next__())
+```
+
+将创建迭代器类
+```py
+class Numbers:
+  def __iter__(self):
+    self.a = 1
+    return self
+ 
+  def __next__(self):
+    x = self.a
+    self.a += 1
+    return x
+
+
+num = MyNumbers()
+myiter = iter(num)
+print(next(myiter))
+print(next(myiter))
 ```

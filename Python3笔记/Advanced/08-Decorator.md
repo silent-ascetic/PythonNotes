@@ -153,3 +153,101 @@ def add(a, b):
 
 print(add(1, 2))
 ```
+
+## 通用装饰器
+
+有没有参数、返回值的函数都能修饰
+```py
+def check(fun):
+    def inner(*args, **kwargs):
+        ret = fun(*args, **kwargs)
+        return ret
+    return inner
+
+
+@check
+def test():
+    print('----test----')
+
+
+@check
+def add(a, b):
+    return a + b
+
+
+print(add(1, 2))
+print(test())
+```
+
+**注：**
+* 没有return语句的函数返回值是 `None`，反正它有一个值，所以 `ret = fun(*args, **kwargs)` 就不会报错
+* 对于`*args, **kwargs` 参数列表，可以传参也可以不传
+
+## 带参装饰器
+
+```py
+def check(arg=None):
+    def check(fun):
+        def inner(*args, **kwargs):
+            ret = fun(*args, **kwargs)
+            return ret
+        return inner
+    return check
+
+
+@check('sh')
+def test():
+    print('----test----')
+
+
+# 不传参数时也要写括号
+@check()
+def add(a, b):
+    return a + b
+
+
+print(add(1, 2))
+```
+
+
+## 类装饰器
+
+基础知识
+```py
+class Test(object):
+    def __call__(self):
+        print('test')
+
+
+t = Test()
+# 在类中定义了 __call__ 方法就可以通过以下方法调用它
+t()
+```
+
+正题
+```py
+class Check(object):
+    def __init__(self, fun):
+        print('初始化')
+        self.__fun = fun
+
+    # 这样写是通用的
+    def __call__(self, *args, **kwargs):
+        return self.__fun(*args, **kwargs)
+
+
+# 等价于 test = Check(test)
+@Check
+def test():
+    print('----test----')
+
+
+@Check
+def add(a, b):
+    return a + b
+
+
+print(add(1, 2))
+test()
+
+```

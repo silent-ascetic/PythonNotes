@@ -1,7 +1,7 @@
 # Table of contents
 
 * [前言](README.md)
-* [Python介绍](01PythonIntoduce.md)
+* [Python介绍](01PythonIntroduce.md)
 
 ## 基础
 
@@ -39,6 +39,12 @@
 
 * [01.拷贝](Advanced/01-Copy.md)
 * [02.位运算](Advanced/02-BitOperation.md)
+* [元类](Advanced/03-MetaClass.md)
+* [迭代器](Advanced/04-Iterator.md)
+* [生成器](Advanced/05-Generator.md)
+* [闭包](Advanced/06-Closure.md)
+* [作用域](Advanced/07-Scope.md)
+* [装饰器](Advanced/08-Decorator.md)
 
 ## 杂记
 

@@ -15,8 +15,11 @@ _book
 *.mobi
 *.pdf
 
-# vscode seting
+# vscode setting
 .vscode
 
 # test file
 test*.*
+
+# pyc folder
+__pycache__

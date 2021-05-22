@@ -54,7 +54,9 @@ file.readline()
 file.readlines()
 ```
 
-## 不用打开文件就能执行的操作
+## 文件操作常用函数
+
+### os模块
 
 ```python
 import os
@@ -64,16 +66,43 @@ os.remove('filePath')
 # 删除空文件夹
 os.rmdir('folderPath')
 
+'''递归删除目录。工作方式类似于 rmdir()，不同之处在于，如果成功删除了末尾一级目录，removedirs() 会尝试依次删除 path 中提到的每个父目录，直到抛出错误为止（但该错误会被忽略，因为这通常表示父目录不是空目录）。例如，os.removedirs('foo/bar/baz') 将首先删除目录 'foo/bar/baz'(必须是空文件夹)，然后如果 'foo/bar' 和 'foo' 为空，则继续删除它们。如果无法成功删除末尾一级目录，则抛出 OSError 异常。'''
+os.removedirs('folderPath')
+
 # 创建文件夹
 os.mkdir('folderPath')
 
 # 重命名文件
 os.rename('oldName', 'newName ')
 
+# 判断是文件还是文件夹
+os.path.isfile("path")
+os.path.isdir('path')
+
+# 判断是否为绝对路径
+os.path.isabs('path')
+
+# 判断文件（夹）是否存在
+os.path.exists('path')
+
+# 返回一个目录的目录名和文件名
+os.path.split('path')
+
+# 分离扩展名
+os.path.splitext("path")
+
+# 获取路径名
+os.path.dirname('path')
+
+# 获取文件名
+os.path.basename('path')
+
+
+
 # 将文件夹中的所有文件/夹名存储到列表中并返回
 os.listdir('folderPath')
 
-# 获取程序运行路径
+# 获取此脚本运行路径
 os.getcwd()
 
 # 更改默认路径(默认为程序运行路径)

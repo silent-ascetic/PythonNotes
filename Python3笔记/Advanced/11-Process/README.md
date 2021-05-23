@@ -21,5 +21,6 @@
 
 ### 4. 具体实现
 
-python中os模块中的 `fork()` 函数可以创建一个子进程来实现多任务，但只适用于Unix及其衍生系统。  
-Python在multiprocessing模块中封装了一个Process类用来实现创建进程的功能，此类在Unix和Windows中通用。
+* python中os模块中的 `fork()` 函数可以创建一个子进程来实现多任务，但只适用于Unix及其衍生系统。  
+* Python在multiprocessing模块中封装了一个Process类用来实现创建进程的功能，此类在Unix和Windows中通用。
+* 通过进程池实现

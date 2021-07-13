@@ -16,6 +16,8 @@ udpSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 udpSocket.sendto(b'The message', ('192.168.18.112', 1200))
 # 每次发送信息时系统为套接字随机分配一个端口
 udpSocket.sendto(b'The message', ('192.168.18.112', 1200))
+# 关闭套接字资源
+udpSocket.close()
 
 ```
 
@@ -34,6 +36,9 @@ udpSocket.sendto(b'The message', ('192.168.18.112', 1200))
 # 每次发送信息时系统为套接字随机分配一个端口
 udpSocket.sendto(b'The message', ('192.168.18.112', 1200))
 
+udpSocket.close()
+
+
 ```
 
 ### 接收数据
@@ -47,8 +52,16 @@ udpSocket.bind(('', 1020))
 
 # 参数表示最大接收字节数
 message = udpSocket.recvfrom(1024)
+udpSocket.close()
+
 # 知道接收到信息才会继续向下运行
 print(message)
+
+'''
+打印结果：
+(b'The message', ('192.168.181.25', 1020))
+其中IP是发送端的IP，端口是发送端的端口
+'''
 ```
 
 ```py
@@ -59,11 +72,14 @@ udpSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 udpSocket.bind(('', 1020))
 # 将字符串转换成字节
 udpSocket.sendto('发送的消息'.encode('utf-8'), ('192.168.18.16', 1020))
+udpSocket.sendto('发送的消息'.encode('gb2312'), ('192.168.18.5', 1020))
 # 参数表示最大接收字节数
 message = udpSocket.recvfrom(1024)
+udpSocket.close()
 
 # 将字节转换成字符串
 print(message[0].decode())
+print(message[0].decode('gb2312'), f'{message[1][0]}:{message[1][1]}')
 ```
 
 ## 附加知识点

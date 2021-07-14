@@ -4,7 +4,7 @@
 
 ## socket
 
-> python中用于程序间网络通信的库，[官方文档](https://docs.python.org/zh-cn/3/library/socket.html?highlight=socket)
+> python中用于程序间网络通信的模块，[官方文档](https://docs.python.org/zh-cn/3/library/socket.html?highlight=socket)
 
 ### 发送数据
 

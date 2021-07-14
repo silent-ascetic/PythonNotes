@@ -52,12 +52,17 @@ def main():
 
 
 def communication(new_socket, client_info):
-    recv_data = new_socket.recv(1024)
-    print(f'ip:post={client_info},message={recv_data.decode()}')
-    # 隔五秒再回消息
-    time.sleep(5)
-    message = f'当前时间：{time.asctime(time.localtime(time.time()))}，{client_info}'
-    new_socket.send(message.encode())
+    while True:
+        recv_data = new_socket.recv(1024)
+        # 当客户端的socket对象调用close()方法时，收到的数据长度为零
+        if len(recv_data) == 0:
+            break
+        print(f'ip:post={client_info},message={recv_data.decode()}')
+        # 隔五秒再回消息
+        time.sleep(5)
+        message = f'当前时间：{time.asctime(time.localtime(time.time()))}，{client_info}'
+        new_socket.send(message.encode())
+        
     new_socket.close()
 
 

@@ -54,10 +54,10 @@
   * [04.Queue](Advanced/11-Process/04.Queue.md)
 * [12.线程](Advanced/12-Thread/README.md)
   * [01.Thread](Advanced/12-Thread/01.Thread.md)
-  * [02.同步](Advanced/12-Thread/02.Synchronization.md)
-  * [03.异步](Advanced/12-Thread/03.Asynchronization.md)
-  * [04.local](Advanced/12-Thread/04.ThreadLocal.md)
-  * [05.GIL](Advanced/12-Thread/05.GIL.md)
+  * [02.local](Advanced/12-Thread/04.ThreadLocal.md)
+  * [03.GIL](Advanced/12-Thread/05.GIL.md)
+* [13.同步](Advanced/13-Synchronization.md)
+* [14.异步](Advanced/14-Asynchronization.md)
 
 ## 网络
 

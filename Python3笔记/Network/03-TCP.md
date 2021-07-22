@@ -37,7 +37,7 @@ def main():
 
     # 参数设置同时连接数，是正数就行，具体由操作系统决定
     serve_socket.listen(1)
-    new_socket, client_info = serve_socket.accept()
+    # new_socket, client_info = serve_socket.accept()
     for _ in range(5):
         '''
         new_socket：新创建的用于真正与建立连接客户端通信的套接字对象
@@ -98,7 +98,7 @@ def create_client(post):
 
 def send():
     tcpSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    tcpSocket.bind(('', 1211))
+    # tcpSocket.bind(('', 1211))
 
     tcpSocket.connect(('192.168.18.116', 8088))
     # 将字符串转换成字节

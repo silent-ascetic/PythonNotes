@@ -60,6 +60,7 @@
   * [03.GIL](Python3笔记/Advanced/12-Thread/05.GIL.md)
 * [13.同步](Python3笔记/Advanced/13-Synchronization.md)
 * [14.异步](Python3笔记/Advanced/14-Asynchronization.md)
+* [15.re模块](Python3笔记/Advanced/15-re.md)
 
 ## 网络
 

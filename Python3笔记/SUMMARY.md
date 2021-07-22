@@ -58,6 +58,7 @@
   * [03.GIL](Advanced/12-Thread/05.GIL.md)
 * [13.同步](Advanced/13-Synchronization.md)
 * [14.异步](Advanced/14-Asynchronization.md)
+* [15.re模块](Advanced/15-re.md)
 
 ## 网络
 
